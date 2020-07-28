@@ -14,9 +14,25 @@
       </ul>
     </td>
   </tr>
-  <tr align="left" height="100px">
-    <td>Welcome to Xcompany</td>
+
+  <tr height="300px">
+    <td>
+      <form>
+        <fieldset width="500px">
+          <legend>FORGOT PASSWORD</legend>
+          <table>
+            <tr>
+              <td>Enter Email</td>
+              <td>: <input type="email" name="email"></td>
+            </tr>
+          </table>
+          <hr>
+          <input type="submit" name="submit">
+        </fieldset>
+      </form>
+    </td>
   </tr>
+
   <tr>
     <td align="center">copyright@2017</td>
   </tr>
