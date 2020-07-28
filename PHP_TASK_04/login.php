@@ -1,9 +1,3 @@
-<?php
-
-  if(isset($_GET['msg'])){
-    echo $_GET['msg'];
-  }
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +8,7 @@
   <tr>
     <td width="800px"><h2>Xcompany</h2> 
       <ul align="right">
-        <a href="home.php">Home</a>|
+        <a href="publicHome.php">Home</a>|
         <a href="login.php">Login</a>|
         <a href="registration.php">Registration</a>
       </ul>
@@ -23,7 +17,7 @@
 
   <tr height="300px">
     <td>
-      <form>
+      <form action="logcheck.php" method="post">
         <fieldset width="500px">
           <legend>LOGIN</legend>
           <table>
@@ -33,7 +27,7 @@
             </tr>
             <tr>
               <td>Password</td>
-              <td>: <input type="text" name="pass"></td>
+              <td>: <input type="Password" name="pass"></td>
             </tr>
           </table>
           <hr>
