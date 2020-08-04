@@ -10,9 +10,12 @@
 		if(empty($userId) || empty($password) ){
 			echo "null submission found!";
 		}else{
-			if(isset($_COOKIE['userId']) && isset($_COOKIE['pass'])){
-				if($userId == $_COOKIE['userId'] && $password == md5($_COOKIE['pass'])){
-					if($_COOKIE['userType'] == "Admin")
+			$file = fopen('user.txt', 'r');
+			$data = fread($file, filesize('user.txt'));
+			$user = explode('|', $data);
+
+			if(trim($user[0]) == $uname && trim($user[1]) == $password){
+				if($_COOKIE['userType'] == "Admin")
 					{
 						setcookie('status', "OK", time()+3600, '/');
 					    header('location: AdminPage.php');
@@ -21,11 +24,8 @@
 						setcookie('status', "OK", time()+3600, '/');
 					    header('location: UserPage.php');
 					}
-				}else{
-					header('location: login.php?msg=sorry_invalid_username/password');
-				}
 			}else{
-				echo "don't have any account!";
+				echo "Invalid username/password";
 			}
 		}	
 

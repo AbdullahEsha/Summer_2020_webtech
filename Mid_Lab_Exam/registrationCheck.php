@@ -37,6 +37,10 @@
 
 			echo "Cookie set.";
 
+			$file = fopen('user.txt', 'a');
+			fwrite($file, $userId.'|'.$password.'|'.$email.'|'.$name.'|'.$userType."/r/n");
+			fclose($file);
+
 			header('location: login.php');
 			}
 		}
