@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,10 +17,9 @@
 
   <tr height="500px">
     <td>
-      <form>
         <fieldset>
     <legend><b>REGISTRATION</b></legend>
-	<form action="registrationCheck.php" method="post">
+	<form action="registrationCheck.php" method="POST">
 		<br/>
 		<table width="100%" cellpadding="0" cellspacing="0">
 			<tr>
@@ -32,6 +30,14 @@
 			</tr>		
 			<tr><td colspan="4"><hr/></td></tr>
 			<tr>
+				<td>User Name</td>
+				<td>:</td>
+				<td><input name="userName" type="text"></td>
+				<td></td>
+			</tr>
+
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
 				<td>Email</td>
 				<td>:</td>
 				<td>
@@ -40,13 +46,7 @@
 				</td>
 				<td></td>
 			</tr>		
-			<tr><td colspan="4"><hr/></td></tr>
-			<tr>
-				<td>User Name</td>
-				<td>:</td>
-				<td><input name="userName" type="text"></td>
-				<td></td>
-			</tr>		
+				
 			<tr><td colspan="4"><hr/></td></tr>
 			<tr>
 				<td>Password</td>
@@ -88,11 +88,10 @@
 			</tr>
 		</table>
 		<hr/>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Submit" name="submit">
 		<input type="reset">
 	</form>
 </fieldset>
-      </form>
     </td>
   </tr>
 

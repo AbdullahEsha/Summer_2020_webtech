@@ -1,3 +1,22 @@
+<?php
+
+if(isset($_POST['submit']))
+{
+  if($_COOKIE['email']==$_POST['email'])
+  {
+      header('location: login.php');
+      echo $_COOKIE['pass'];
+  }
+  else
+  {
+    echo "Error";
+  }
+}
+else
+{
+  echo "Error";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +27,7 @@
   <tr>
     <td width="800px"><h2>Xcompany</h2> 
       <ul align="right">
-        <a href="home.php">Home</a>|
+        <a href="publicHome.php">Home</a>|
         <a href="login.php">Login</a>|
         <a href="registration.php">Registration</a>
       </ul>

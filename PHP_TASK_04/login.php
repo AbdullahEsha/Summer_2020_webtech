@@ -1,3 +1,9 @@
+<?php
+
+  if(isset($_GET['msg'])){
+    echo $_GET['msg'];
+  }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +29,7 @@
           <table>
             <tr>
               <td>User Name</td>
-              <td>: <input type="text" name="name"></td>
+              <td>: <input type="text" name="userName"></td>
             </tr>
             <tr>
               <td>Password</td>
