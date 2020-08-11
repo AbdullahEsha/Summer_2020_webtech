@@ -1,3 +1,10 @@
+<?php
+
+  $conn = mysqli_connect('127.0.0.1', 'root', '', 'webtech');
+  $result = mysqli_query($conn, 'select * from userInfo');
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,23 +42,21 @@
 	<td width="80%">
     <fieldset>
       <legend>BOOKING</legend>
-    	<form>
+    	<form method="post">
     		<table border="1" cellspacing="0" cellpadding="8" width="100%" align="center">
            <tr>
              <td >Arrival Time</td>
              <td>Departure Time</td>
              <td>Pakage</td>
            </tr>
-           <?//php  while($data = mysqli_fetch_assoc($result)){ ?>
+           <?php  while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td><?//php echo $data['itemName'] ?></td>
-             <td><?//php echo $data['picture'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>
-             <!--<td><?//php echo $data['detail'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>-->
+             <td><?php echo $data['name'] ?></td>
+             <td><?php echo $data['userName'] ?></td>
+             <td><?php echo $data['email'] ?></td>
            </tr>
 
-           <?//php } ?>
+           <?php } ?>
            <tr>
              <td colspan="3" align="right">
                <input type="button" name="button" value="Confirm">
