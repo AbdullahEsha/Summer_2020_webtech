@@ -88,7 +88,6 @@
              <td><?php echo $data['password'] ?></td>
              <td><?php echo $data['email'] ?></td>
              <td><?php echo $data['dateOfBirth'] ?></td>
-             
            </tr>
            <?php } ?>
            <tr>
