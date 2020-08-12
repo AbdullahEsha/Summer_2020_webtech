@@ -1,3 +1,7 @@
+<?php
+  $conn = mysqli_connect('localhost', 'root', '', 'webtech');
+  $result = mysqli_query($conn, 'select * from userInfo');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,12 +45,12 @@
              <td width="200px">Topic</td>
              <td>Comments</td>
            </tr>
-           <?//php  while($data = mysqli_fetch_assoc($result)){ ?>
+           <?php  while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td><?//php echo $data['itemName'] ?></td>
-             <td><?//php echo $data['picture'] ?></td>
+             <td><?php echo $data['name'] ?></td>
+             <td><?php echo $data['email'] ?></td>
            </tr>
-           <?//php } ?>
+           <?php } ?>
         </table>      
     	</form>
     </fieldset>

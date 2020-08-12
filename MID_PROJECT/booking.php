@@ -1,5 +1,5 @@
 <?php
-  $conn = mysqli_connect('127.0.0.1', 'root', '', 'webtech');
+  $conn = mysqli_connect('localhost', 'root', '', 'webtech');
   $result = mysqli_query($conn, 'select * from userInfo');
 ?>
 <!DOCTYPE html>

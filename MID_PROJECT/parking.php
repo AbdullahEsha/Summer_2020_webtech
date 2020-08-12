@@ -1,3 +1,7 @@
+<?php
+  $conn = mysqli_connect('localhost', 'root', '', 'webtech');
+  $result = mysqli_query($conn, 'select * from userInfo');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,14 +45,12 @@
              <td>Time</td>
              <td>Vehicle Type</td>
            </tr>
-           <?//php  while($data = mysqli_fetch_assoc($result)){ ?>
+           <?php  while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td><?//php echo $data['itemName'] ?></td>
-             <td><?//php echo $data['picture'] ?></td>
-             <!--<td><?//php echo $data['detail'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>-->
+             <td><?php echo $data['userName'] ?></td>
+             <td><?php echo $data['email'] ?></td>
            </tr>
-           <?//php } ?>
+           <?php } ?>
            <tr>
              <td colspan="3" align="right">
               Parking Location:_  _  _
@@ -69,14 +71,16 @@
              <td>Time</td>
              <td>Vehicle Type</td>
            </tr>
-           <?//php  while($data = mysqli_fetch_assoc($result)){ ?>
+           <?php
+             //$conn = mysqli_connect('localhost', 'root', '', 'webtech');
+             $result = mysqli_query($conn, 'select * from userInfo');
+
+           while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td><?//php echo $data['itemName'] ?></td>
-             <td><?//php echo $data['picture'] ?></td>
-             <!--<td><?//php echo $data['detail'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>-->
+             <td><?php echo $data['name'] ?></td>
+             <td><?php echo $data['email'] ?></td>
            </tr>
-           <?//php } ?>
+           <?php } ?>
            <tr>
              <td colspan="3" align="right">
               Amount:_  _  _

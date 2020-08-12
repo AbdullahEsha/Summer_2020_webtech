@@ -1,3 +1,7 @@
+<?php
+  $conn = mysqli_connect('localhost', 'root', '', 'webtech');
+  $result = mysqli_query($conn, 'select * from userInfo');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,15 +48,15 @@
              <td>Bonus</td>
              <td>Total Amount</td>
            </tr>
-           <?//php  while($data = mysqli_fetch_assoc($result)){ ?>
+           <?php  while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td><?//php echo $data['itemName'] ?></td>
-             <td><?//php echo $data['picture'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>
-             <td><?//php echo $data['detail'] ?></td>
+             <td><?php echo $data['userName'] ?></td>
+             <td><?php echo $data['password'] ?></td>
+             <td><?php echo $data['email'] ?></td>
+             <td><?php echo $data['dateOfBirth'] ?></td>
+             <td><?php echo $data['userType'] ?></td>
            </tr>
-           <?//php } ?>
+           <?php } ?>
         </table>      
     	</form>
     </fieldset>
