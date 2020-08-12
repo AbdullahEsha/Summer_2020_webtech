@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<php>
+<html>
 <head>
   <title></title>
 </head>
@@ -36,7 +36,7 @@
     <fieldset>
       <legend>ACTIVITY</legend>
     	<form>
-    		<table border="1" cellspacing="0" cellpadding="8" width="95%" align="center">
+    		<table border="1" cellspacing="0" cellpadding="8" width="100%" align="center">
            <tr>
              <td>Activity</td>
              <td align="center">Detail</td>

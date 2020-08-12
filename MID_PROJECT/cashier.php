@@ -1,5 +1,10 @@
+<?php
+  $conn = mysqli_connect('127.0.0.1', 'root', '', 'webtech');
+  $result = mysqli_query($conn, 'select * from userInfo');
+  //$result = mysqli_query($conn, 'select sum(Bill) from userInfo where (select * from userInfo where name=="")');
+?>
 <!DOCTYPE html>
-<php>
+<html>
 <head>
   <title></title>
 </head>
@@ -46,13 +51,13 @@
              <td>Services</td>
              <td>Bill ($)</td>
            </tr>
-           <?//php  while($data = mysqli_fetch_assoc($result)){ ?>
+           <?php  while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td> parking<?//php echo $data['itemName'] ?></td>
-             <td> 200$<?//php echo $data['picture'] ?></td>
+             <td><?php echo $data['name'] ?></td>
+             <td><?php echo $data['email'] ?></td>
            </tr>
 
-           <?//php } ?>
+           <?php } ?>
            <tr>
              <td>
                Total:

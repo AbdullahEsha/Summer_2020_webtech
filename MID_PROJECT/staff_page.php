@@ -1,13 +1,17 @@
+<?php
+  session_start();
 
+  if($_COOKIE['status'] == "OK"){ 
+?>
 <!DOCTYPE html>
-<php>
+<html>
 <head>
   <title></title>
 </head>
 <body>
   <table border="1px" cellpadding="5" cellspacing="0" align="center" width="100%" height="100%">
   <tr >
-    <td colspan="2" width="900px"><h2>Xcompany</h2> 
+    <td colspan="2"><h2>Xcompany</h2> 
       <ul align="right"> Logged in as
         <a href="staff_page.php"><?=$_COOKIE['userName']?></a>|
         <a href="logout.php">Logout</a>
@@ -37,3 +41,8 @@
 
 </body>
 </html>
+<?php
+  }else{
+    header('location: login.php');
+  }
+?>

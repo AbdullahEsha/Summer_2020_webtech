@@ -1,9 +1,6 @@
 <?php
-
   $conn = mysqli_connect('127.0.0.1', 'root', '', 'webtech');
   $result = mysqli_query($conn, 'select * from userInfo');
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +52,6 @@
              <td><?php echo $data['userName'] ?></td>
              <td><?php echo $data['email'] ?></td>
            </tr>
-
            <?php } ?>
            <tr>
              <td colspan="3" align="right">

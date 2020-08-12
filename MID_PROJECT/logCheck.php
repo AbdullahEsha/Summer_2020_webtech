@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
             $password = $_POST['pass'];
             $query = "SELECT * FROM userinfo WHERE UserName = '$uname' AND Password = '$password'";
             $result = mysqli_query($conn, $query);
-            //$i = 0;
+            
             while( $row = mysqli_fetch_assoc($result) ){
                 
                 $Cemail    = $row['email'];
@@ -30,14 +30,14 @@ if(isset($_POST['submit'])){
                         $_SESSION['pass']       = $password;
                         $_SESSION['userType']   = $CuserType;
                         $_SESSION['user']       = $user;
-
-            
+                        $_SESSION['status']     = "Ok";
                     
                         setcookie('userName', $Cusername, time()+3600, '/');
                         setcookie('email', $Cemail, time()+3600, '/');
                         setcookie('pass', $Cpassword, time()+3600, '/');
                         setcookie('userType', $CuserType, time()+3600, '/');
-            
+                        setcookie('status', "OK", time()+3600, '/');
+
                         echo "Cookie set.";
                         header('location: manager_page.php');
                     }
@@ -50,6 +50,7 @@ if(isset($_POST['submit'])){
                         $_SESSION['pass']       = $password;
                         $_SESSION['userType']   = $CuserType;
                         $_SESSION['user']       = $user;
+                        $_SESSION['status']     = "Ok";
 
             
                     
@@ -57,12 +58,13 @@ if(isset($_POST['submit'])){
                         setcookie('email', $Cemail, time()+3600, '/');
                         setcookie('pass', $Cpassword, time()+3600, '/');
                         setcookie('userType', $CuserType, time()+3600, '/');
-            
+                        setcookie('status', "OK", time()+3600, '/');
+
                         echo "Cookie set.";
                         header('location: staff_page.php');
                     }
                 }
-                //$i++;
+                
             } 
         }
     }  

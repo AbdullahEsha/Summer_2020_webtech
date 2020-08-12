@@ -1,5 +1,10 @@
+<?php
+
+  $conn = mysqli_connect('127.0.0.1', 'root', '', 'webtech');
+  $result = mysqli_query($conn, 'select * from userInfo');
+?>
 <!DOCTYPE html>
-<php>
+<html>
 <head>
   <title></title>
 </head>
@@ -41,18 +46,16 @@
              <td width="100px">Order Type</td>
              <td>Details</td>
            </tr>
-           
+           <?php  while($data = mysqli_fetch_assoc($result)){ ?>
            <tr>
-             <td><?//php echo $data['itemName'] ?></td>
-             <td><?//php echo $data['picture'] ?></td>
+             <td><?php echo $data['userName'] ?></td>
+             <td><?php echo $data['email'] ?></td>
            </tr>
-
+           <?php } ?>
            <tr>
-            
              <td colspan="2" align="right">
                <input type="submit" name="submit" value="Submit">
              </td>
-           
            </tr>
         </table>      
     	</form>
