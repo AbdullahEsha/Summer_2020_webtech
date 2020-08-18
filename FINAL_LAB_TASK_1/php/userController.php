@@ -157,7 +157,7 @@
 	}
 
 	if(isset($_POST['C_delete'])){
-		$id 		= $_POST['id'];
+		$id = $_POST['id'];
 
 		if(empty($id)){
 			header('location: ../views/delete_com.php?id={$id}');
