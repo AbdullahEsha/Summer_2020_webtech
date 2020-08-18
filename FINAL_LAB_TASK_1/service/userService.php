@@ -134,8 +134,7 @@
 		if(!$conn){
 			echo "DB connection error";
 		}
-
-		$sql = "update companies set company_name='{$company['com_name']}',profile_description='{$company['description']}', industry='{$company['industry']}',company_website='{$company['website']}', company_logo='{$company['logo']}',user_account_id={$company['userid']} where id={$company['id']}";
+		$sql = "UPDATE companies set company_name ='{$company['company_name']}', profile_description='{$company['profile_description']}', industry ='{$company['industry']}', company_website ='{$company['website']}',  company_logo ='{$company['company_logo']}',user_account_id ={$company['user_account_id']} where id={$company['id']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;
