@@ -104,7 +104,7 @@
 		$id          = $_POST['id'];
 
 		if(empty($com_name) || empty($description) || empty($industry) || empty($website) || empty($logo) || empty($userid)){
-			header('location: ../views/edit_com.php?id=' . $id);
+			header('location: ../views/edit_com.php?id={$id}');
 		}else{
 
 			$company = [
@@ -122,7 +122,7 @@
 			if($status){
 				header('location: ../views/all_companies.php?success=done');
 			}else{
-				header('location: ../views/edit_com.php?id=' . $id);
+				header('location: ../views/edit_com.php?id={$id}');
 			}
 		}
 	}
