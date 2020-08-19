@@ -19,7 +19,7 @@
 
 	<form action="../php/userController.php" method="post">
 		<fieldset>
-			<legend>Edit User</legend>
+			<legend>Delete User</legend>
 			<table>
 				<tr>
 					<td>Username</td>

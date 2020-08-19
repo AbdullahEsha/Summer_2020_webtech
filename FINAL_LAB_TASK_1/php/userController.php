@@ -130,19 +130,13 @@
 
 	if(isset($_POST['delete'])){
 
-		//$username 	= $_POST['username'];
-		//$password 	= $_POST['password'];
-		//$email 		= $_POST['email'];
-		//$id 		= $_POST['id'];
+		$id = $_POST['id'];
 
-		if(empty($username) || empty($password) || empty($email)){
+		if(empty($id)){
 			header('location: ../views/delete.php?id={$id}');
 		}else{
 
 			$user = [
-				//'username'=> $username,
-				//'password'=> $password,
-				//'email'=> $email,
 				'id'=> $id
 			];
 
