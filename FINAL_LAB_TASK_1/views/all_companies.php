@@ -14,7 +14,7 @@
 	<a href="home.php">Back</a> |
 	<a href="../php/logout.php">Logout</a> 
 	
-	<h3>User list</h3>
+	<h3>Company list</h3>
 
 	<table border="1">
 		<tr>

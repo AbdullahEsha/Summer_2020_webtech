@@ -8,7 +8,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users where id={$id}";
+		$sql = "SELECT * FROM users WHERE id={$id}";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		return $row;
@@ -134,8 +134,7 @@
 		if(!$conn){
 			echo "DB connection error";
 		}
-		$sql = "UPDATE companies set company_name ='{$company['company_name']}', profile_description='{$company['profile_description']}', industry ='{$company['industry']}', company_website ='{$company['website']}',  company_logo ='{$company['company_logo']}',user_account_id ={$company['user_account_id']} where id={$company['id']}";
-
+		$sql = "UPDATE companies SET company_name ='{$company['com_name']}', profile_description='{$company['description']}', industry ='{$company['industry']}', company_website ='{$company['website']}',  company_logo ='{$company['logo']}',user_account_id ={$company['userid']} WHERE id={$company['id']}";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
@@ -164,8 +163,8 @@
 			echo "DB connection error";
 		}
 
-		$sql = "DELETE FROM `companies` WHERE id='{$company['id']}'";
-
+		$sql = "DELETE FROM companies WHERE id='{$company['id']}'";
+		echo $sql;
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{

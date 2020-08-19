@@ -19,7 +19,7 @@
 
 	<form action="../php/userController.php" method="post">
 		<fieldset>
-			<legend>Edit User</legend>
+			<legend>Delete Company</legend>
 			<table>
 				<tr>
 					<td>Company Name</td>
@@ -49,9 +49,9 @@
 					<td></td>
 					<td>
 						<font size="3" color="red">Are you sure that you want to delete the row!!</font><br>
-						<input type="hidden" name="id" value="<?=$user['id']?>">
+						<input type="hidden" name="id" value="<?=$company['id']?>">
 						<input type="submit" name="C_delete" value="Confirm"> 
-						<a href="all_users.php">Back</a>
+						<a href="all_companies.php">Back</a>
 					</td>
 				</tr>
 			</table>

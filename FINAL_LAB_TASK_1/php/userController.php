@@ -101,10 +101,10 @@
 		$website 	 = $_POST['company_website'];
 		$logo 		 = $_POST['company_logo'];
 		$userid 	 = $_POST['user_account_id'];
-		$id          = $_POST['id']
+		$id          = $_POST['id'];
 
 		if(empty($com_name) || empty($description) || empty($industry) || empty($website) || empty($logo) || empty($userid)){
-			header('location: ../views/edit_com.php?id={$id}');
+			header('location: ../views/edit_com.php?id=' . $id);
 		}else{
 
 			$company = [
@@ -120,9 +120,9 @@
 			$status = updateCom($company);
 
 			if($status){
-				header('location: ../views/all_company.php?success=done');
+				header('location: ../views/all_companies.php?success=done');
 			}else{
-				header('location: ../views/edit_com.php?id={$id}');
+				header('location: ../views/edit_com.php?id=' . $id);
 			}
 		}
 	}
@@ -130,19 +130,19 @@
 
 	if(isset($_POST['delete'])){
 
-		$username 	= $_POST['username'];
-		$password 	= $_POST['password'];
-		$email 		= $_POST['email'];
-		$id 		= $_POST['id'];
+		//$username 	= $_POST['username'];
+		//$password 	= $_POST['password'];
+		//$email 		= $_POST['email'];
+		//$id 		= $_POST['id'];
 
 		if(empty($username) || empty($password) || empty($email)){
 			header('location: ../views/delete.php?id={$id}');
 		}else{
 
 			$user = [
-				'username'=> $username,
-				'password'=> $password,
-				'email'=> $email,
+				//'username'=> $username,
+				//'password'=> $password,
+				//'email'=> $email,
 				'id'=> $id
 			];
 
