@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="dob.js"></script>
+</head>
+<body>
+  <form action="dobTest.php" method="post">
+    <fieldset>
+            <legend>Date of Birth</legend>
+            <table>
+                <tr>
+                   <td width="60px">dd</td>
+                   <td width="60px">mm</td>
+                   <td>yyyy</td>
+                </tr>
+            </table>
+            <input type="text" id="dd" name="day" size="2">/
+            <input type="text" id="mm" name="month" size="2">/
+            <input type="text" id="yy" name="year" size="3"><br>
+            <hr>
+            <input type="submit" onclick="validateDOB()" name="submit">
+        </fieldset>  
+
+  </form>
+
+</body>
+</html>
