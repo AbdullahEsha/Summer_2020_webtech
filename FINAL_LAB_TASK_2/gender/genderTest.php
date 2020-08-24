@@ -1,18 +1,13 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<form>
-		<fieldset >
-		<legend> Gender </legend>
-			<input type="radio" name="gender" value="Male">Male 
-			<input type="radio" name="gender" value="Female">Female
-			<input type="radio" name="gender" value="Other">Other
-			<br>
-			<input type="submit" name="submit" value="Submit">
-		</fieldset>
-	</form>
+<?php
 
-</body>
-</html>
+if(isset($_POST['submit']))
+{
+	if(empty($_POST['gender']))
+	{
+		echo "Invalid!";
+	}
+	else
+	echo $_POST['gender'];
+}
+
+?>
