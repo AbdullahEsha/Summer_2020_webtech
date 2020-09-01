@@ -16,7 +16,7 @@
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="text" name="email" onkeyup="f2()"></td>
+					<td id="C1"><input type="text" name="email" onkeyup="f2()"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
@@ -38,19 +38,21 @@
 	    }
 
 	    function f2(){
-	    	    var name = document.getElementById('name').value;
+	    	    var email = document.getElementById('email').value;
 				var xhttp = new XMLHttpRequest();
 				xhttp.open('POST', 'PhpForJs.php', true);
 				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				xhttp.send('name='+name);
+				xhttp.send('email='+email);
 
 				xhttp.onreadystatechange = function (){
 					if(this.readyState == 4 && this.status == 200){
 
 						if(this.responseText != ""){
-							document.getElementById('searchdata').innerHTML = this.responseText;
+							document.getElementById('C1').innerHTML = "already exsist!!";
+							return false;
 						}else{
-							document.getElementById('searchdata').innerHTML = "";
+							document.getElementById('C1').innerHTML = "";
+							return true;
 						}
 						
 					}	
