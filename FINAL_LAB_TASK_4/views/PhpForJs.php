@@ -1,10 +1,12 @@
 
 <?php
 
-	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$username = $_POST['username'];
+	$password = $_POST['password'];
 
 	$conn = mysqli_connect('localhost', 'root', '', 'webtech');
-	$sql= "select * from users where username like '%{$name}%'";
+	$sql= "INSERT INTO `users`(`id`, `username`, `password`, `email`, `type`) VALUES (,'$username','$password','$email',) ";
 
 	$result = mysqli_query($conn, $sql);
 

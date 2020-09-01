@@ -39,6 +39,9 @@
 
 	    function f2(){
 	    	    var email = document.getElementById('email').value;
+	    	    var password = document.getElementById('password').value;
+	    	    var username = document.getElementById('username').value;
+
 				var xhttp = new XMLHttpRequest();
 				xhttp.open('POST', 'PhpForJs.php', true);
 				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -58,7 +61,10 @@
 					}	
 				}
 
-	    }	
+	    }
+	    function f3	(){
+	    	
+	    }
 	</script>
 </body>
 </html>
