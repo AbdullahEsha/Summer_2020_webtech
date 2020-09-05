@@ -4,12 +4,12 @@
 	<script type="text/javascript" src="email.js"></script>
 </head>
 <body>
-	<form action="emailTest.php">
+	<form action="emailTest.php" onsubmit="return validateEmail()">
 		Email <br>
-		<input type="email" name="txtemail">
+		<input type="email" name="email" id="email">
 		<abbr title="hint: sample@example.com"><b>i</b></abbr>
 		<br>
-		<br>
+		<div id="msg"></div>
 		<input type="submit" name="submit">
 	</form>
 
