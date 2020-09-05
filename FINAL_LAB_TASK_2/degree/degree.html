@@ -1,18 +1,19 @@
+
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<script type="text/javascript" src="degree.js"></script>
 </head>
 <body>
-	<form  action="degreeTest.php" method="post" onsubmit="return validateDegree()">
-		<fieldset>
-			<legend>Degree</legend>
-			<input type="checkbox" id="ssc" name="ssc" value="SSC">SSC
-			<input type="checkbox" id="hsc" name="hsc" value="HSC">HSC
-			<input type="checkbox" id="bsc" name="bsc" value="BSc">BSc
-			<br>
-			<input type="submit" name="submit">
-		</fieldset>
+	<form action="degreeTest.php" method="post" onsubmit="validateDegree()">
+		<input type="checkbox" id="ssc" name="ssc" value="SSC">SSC
+		<input type="checkbox" id="hsc" name="hsc" value="HSC">HSC
+		<input type="checkbox" id="bsc" name="bsc" value="BSC">BSC
+		<br>
+		<hr>
+		<input type="submit" name="submit" >
 	</form>
+
 </body>
 </html>

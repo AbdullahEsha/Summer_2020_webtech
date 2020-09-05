@@ -1,12 +1,12 @@
 function validateDegree(){
 
-  if(!document.getElementById('ssc').checked && !document.getElementById('hsc').checked && !document.getElementById('bsc').checked)
+  if(document.getElementById('ssc').checked || document.getElementById('hsc').checked || document.getElementById('bsc').checked)
   {
-    document.getElementById('degreemsg').innerHTML="Please choose an option";
-    return false;
+    return true;
   }
   else
   {
-    return true;
+  	alert('can not be empty!!');
+    return false;
   }
 }
