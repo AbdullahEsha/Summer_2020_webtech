@@ -5,7 +5,7 @@
 </head>
 <body>
 	<form name="myform" method="post" action="formTest.php" onsubmit="return val()">
-		<table border="1" width="500px" height="300px">
+		<table border="1" cellspacing="0" align="center">
 			<tr>
 				<td colspan="3" align="center" height="30%"><h1> PERSON PROFILE</h1>
 				</td>			
@@ -14,7 +14,7 @@
 				<td  width="20%">Name
 				</td>
 				<td width="30px">
-					<input type="text" id="name" name="Name" onkeyup="removername()" size="30px" height="100" width="100" >
+					<input type="text" id="name" name="name" onkeyup="removername()" size="30px" height="100" width="100" >
 				</td>
 				<td width="5%" id="namemsg">
 				</td>
@@ -43,7 +43,7 @@
 				<td>Date of Birth
 				</td>
 				<td>
-					<input type="text" id="day" name="date" onkeyup="removerdob()"size="5px">/
+					<input type="text" id="day" name="day" onkeyup="removerdob()"size="5px">/
 					<input type="text" id="month" name="month" onkeyup="removerdob()"size="5px">/
 					<input type="text" id="year" name="year" onkeyup="removerdob()"size="5px">   <i>(dd/mm/yyyy)</i>
 				</td>
@@ -54,27 +54,28 @@
 				<td>Blood Group
 				</td>
 				<td>
-					<select name="bg">
-						<option value="A+">A+</option>
-						<option value="A-">A-</option>
-						<option value="B+">B+</option>
-						<option value="B-">B-</option>
-						<option value="AB+">AB+</option>
-						<option value="AB-">AB-</option>
-						<option value="O+">O+</option>
-						<option value="O-">O-</option>
-			</select>
+					<select name="bg" id="bg" onclick="removerblood()">
+						<option></option>
+						<option>A+</option>
+						<option>A-</option>
+						<option>B+</option>
+						<option>B-</option>
+						<option>AB+</option>
+						<option>AB-</option>
+						<option>O+</option>
+						<option>O-</option>
+			        </select>
 				</td>
-				<td>
+				<td id="bgmsg">
 				</td>
 			</tr>
 			<tr>
 				<td>Degree
 				</td>
 				<td>
-					<input type="checkbox" id="ssc" name="ssc" onclick="removerdegree()"> SSC
-					<input type="checkbox" id="hsc" name="hsc" onclick="removerdegree()"> HSC
-					<input type="checkbox" id="bsc"name="bsc" onclick="removerdegree()"> BSc.
+					<input type="checkbox" id="ssc" name="ssc" value="SSC" onclick="removerdegree()"> SSC
+					<input type="checkbox" id="hsc" name="hsc" value="HSC" onclick="removerdegree()"> HSC
+					<input type="checkbox" id="bsc"name="bsc" value="BSC" onclick="removerdegree()"> BSc.
 				</td>
 				<td id="degreemsg">
 				</td>
