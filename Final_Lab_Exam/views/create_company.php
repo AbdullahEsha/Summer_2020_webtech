@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Company</title>
+	<title>Add Author</title>
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="text" name="website" required></td>
+					<td><input type="Password" name="website" required></td>
 				</tr>
 				<tr>
 					<td>Photo</td>

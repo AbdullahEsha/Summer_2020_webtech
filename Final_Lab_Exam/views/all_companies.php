@@ -14,7 +14,7 @@
 	<a href="home.php">Back</a> |
 	<a href="../php/logout.php">Logout</a> 
 	
-	<h3>Company list</h3>
+	<h3>Author list</h3>
 
 	<table border="1">
 		<tr>
@@ -29,19 +29,19 @@
 		</tr>
 
 		<?php  
-			$company = getAllCompany();
-			for ($i=0; $i != count($company); $i++) {  ?>
+			$author = getAllAuthor();
+			for ($i=0; $i != count($author); $i++) {  ?>
 		<tr>
-			<td><?=$company[$i]['id']?></td>
-			<td><?=$company[$i]['company_name']?></td>
-			<td><?=$company[$i]['profile_description']?></td>
-			<td><?=$company[$i]['industry']?></td>
-			<td><?=$company[$i]['company_website']?></td>
-			<td><img height="128px" src="<?=$company[$i]['company_logo']?>"></td>
-			<td><?=$company[$i]['user_account_id']?></td>
+			<td><?=$author[$i]['id']?></td>
+			<td><?=$author[$i]['name']?></td>
+			<td><?=$author[$i]['description']?></td>
+			<td><?=$author[$i]['contactNumber']?></td>
+			<td>****</td>
+			<td><img height="128px" src="<?=$author[$i]['photo']?>"></td>
+			<td><?=$author[$i]['adminId']?></td>
 			<td>
-				<a href="edit_com.php?id=<?=$company[$i]['id']?>">Edit</a> |
-				<a href="delete_com.php?id=<?=$company[$i]['id']?>">Delete</a> 
+				<a href="edit_com.php?id=<?=$author[$i]['id']?>">Edit</a> |
+				<a href="delete_com.php?id=<?=$author[$i]['id']?>">Delete</a> 
 			</td>
 		</tr>
 

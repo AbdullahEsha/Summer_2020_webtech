@@ -163,7 +163,7 @@
 				'id'=> $id
 			];
 
-			$status = deleteCom($company);
+			$status = deleteAuthor($author);
 
 			if($status){
 				header('location: ../views/all_companies.php?success=done');

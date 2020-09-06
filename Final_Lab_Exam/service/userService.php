@@ -45,22 +45,22 @@
 		return $users;
 	}
 
-	function getAllCompany(){
+	function getAllAuthor(){
 		$conn = dbConnection();
 
 		if(!$conn){
 			echo "DB connection error";
 		}
 
-		$sql = "select * from companies";
+		$sql = "select * from authors";
 		$result = mysqli_query($conn, $sql);
-		$companies = [];
+		$authors = [];
 
 		while($row = mysqli_fetch_assoc($result)){
-			array_push($companies, $row);
+			array_push($authors, $row);
 		}
 
-		return $companies;
+		return $authors;
 	}
 
 
@@ -157,14 +157,14 @@
 		}
 	}
 
-	function deleteCom($company){
+	function deleteAuthor($author){
 		$conn = dbConnection();
 		if(!$conn){
 			echo "DB connection error";
 		}
 
-		$sql = "DELETE FROM companies WHERE id='{$company['id']}'";
-		echo $sql;
+		$sql = "DELETE FROM authors WHERE id='{$author['id']}'";
+		//echo $sql;
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
