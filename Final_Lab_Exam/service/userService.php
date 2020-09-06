@@ -98,14 +98,14 @@
 		}
 	}
 
-	function insertCompany($company){
+	function insertAuthor($author){
 		$conn = dbConnection();
 
 		if(!$conn){
 			echo "DB connection error";
 		}
 
-		$sql = "insert into companies values('', '{$company['com_name']}','{$company['description']}', '{$company['industry']}','{$company['website']}', '{$company['logo']}',{$company['userid']})";
+		$sql = "insert into authors values('', '{$author['name']}','{$author['description']}', '{$author['contactNumber']}','{$author['password']}', '{$author['photo']}',{$author['adminId']})";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
@@ -129,12 +129,12 @@
 		}
 	}
 
-	function updateCom($company){
+	function updateCom($author){
 		$conn = dbConnection();
 		if(!$conn){
 			echo "DB connection error";
 		}
-		$sql = "UPDATE companies SET company_name ='{$company['com_name']}', profile_description='{$company['description']}', industry ='{$company['industry']}', company_website ='{$company['website']}',  company_logo ='{$company['logo']}',user_account_id ={$company['userid']} WHERE id={$company['id']}";
+		$sql = "UPDATE authors SET name ='{$author['name']}', description='{$author['description']}', contactNumber ='{$author['contactNumber']}', password ='{$author['password']}',  photo ='{$author['photo']}', adminId ={$author['adminId']} WHERE id={$author['id']}";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
