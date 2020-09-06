@@ -1,70 +1,41 @@
+<?php
+
+	if (isset($_GET['error'])) {
+		
+		if($_GET['error'] == 'db_error'){
+			echo "Something went wrong...please try again";
+		}
+	}
+
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SignUp</title>
+	
 </head>
 <body>
+	<ul>
+        <li><a href="../index.php">Home</a></li>
+        <li><a class="active" href="login.php">Login</a></li>
+        <li><a class="active" href="register.php">SignUp</a></li>
+    </ul>
 
-	<form method="post">
-		<fieldset>
-			<legend>SignUp</legend>
-			<table>
-				<tr>
-					<td>Username</td>
-					<td><input type="text" name="username"></td>
-				</tr>
-				<tr>
-					<td>Email</td>
-					<td id="C1"><input type="text" name="email" onkeyup="f2()"></td>
-				</tr>
-				<tr>
-					<td>Password</td>
-					<td><input type="password" name="password"></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<input type="submit" name="submit" value="Submit" onclick="f1()">
-						<a href="login.php" id="L1" style="display: none">LOGIN</a>
-					</td>
-				</tr>
-			</table>
-		</fieldset>
+	<form action="../php/regCheck.php" method="post">
+		<div >
+			User Name
+			<br>
+		    <input type="text" name="username" size="60%">
+		    <br>	
+			Password<br>
+			<input type="password" name="password" size="60%">
+			<br>
+			Email<br>
+			<input type="text" name="email" size="60%">
+			<br>
+			<hr>
+		    <input type="submit" name="submit" value="Confirm">     <a id="A" href="../index.php">HOME</a>
+		</div>	
 	</form>
-	<script type="text/javascript">
-	    function f1(){
-	    	document.getElementById('L1').style.display = 'inline';
-	    }
-
-	    function f2(){
-	    	    var email = document.getElementById('email').value;
-	    	    var password = document.getElementById('password').value;
-	    	    var username = document.getElementById('username').value;
-
-				var xhttp = new XMLHttpRequest();
-				xhttp.open('POST', 'PhpForJs.php', true);
-				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				xhttp.send('email='+email);
-
-				xhttp.onreadystatechange = function (){
-					if(this.readyState == 4 && this.status == 200){
-
-						if(this.responseText != ""){
-							document.getElementById('C1').innerHTML = "already exsist!!";
-							return false;
-						}else{
-							document.getElementById('C1').innerHTML = "";
-							return true;
-						}
-						
-					}	
-				}
-
-	    }
-	    function f3	(){
-	    	
-	    }
-	</script>
 </body>
 </html>

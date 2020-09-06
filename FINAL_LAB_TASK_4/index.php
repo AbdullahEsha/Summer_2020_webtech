@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Index  Page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
+<ul>
+  <li><a class="active" href="index.php">Home</a></li>
+  <li><a href="views/login.php">Login</a></li>
+  <li><a href="views/register.php">SignUp</a></li>
+</ul>
 
-	<h1 id='head2'>This is our first page</h1>
-	<a href="views/login.php">login</a> |
-	<a href="views/register.php">SignUp</a>
 </body>
 </html>
