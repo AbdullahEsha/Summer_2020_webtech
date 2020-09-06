@@ -22,7 +22,7 @@
 			<table>
 				<tr>
 					<td>Author Name</td>
-					<td><input type="text" name="com_name" required></td>
+					<td><input type="text" name="name" required></td>
 				</tr>
 				<tr>
 					<td>Description</td>
@@ -30,19 +30,19 @@
 				</tr>
 				<tr>
 					<td>Contuct Number</td>
-					<td><input type="text" name="industry" required></td>
+					<td><input type="text" name="contactNumber" required></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="Password" name="website" required></td>
+					<td><input type="Password" name="password" required></td>
 				</tr>
 				<tr>
 					<td>Photo</td>
-					<td><input type="file" name="logo" required></td>
+					<td><input type="file" name="photo" required></td>
 				</tr>
 				<tr>
 					<td>ID</td>
-					<td><input type="text" name="userid" required></td>
+					<td><input type="text" name="adminId" required></td>
 				</tr>
 				<tr>
 					<td></td>

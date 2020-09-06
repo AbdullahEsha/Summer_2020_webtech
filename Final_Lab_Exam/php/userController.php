@@ -35,10 +35,10 @@
 
 		$name 	       = $_POST['name'];
 		$description   = $_POST['description'];
-		$contactNumber = $_POST['industry'];
-		$password 	 = $_POST['website'];
-		$photo 		 = $_POST['logo'];
-		$adminId 	 = $_POST['userid'];
+		$contactNumber = $_POST['contactNumber'];
+		$password 	   = $_POST['password'];
+		$photo 		   = $_POST['photo'];
+		$adminId 	   = $_POST['adminId'];
 
 		if(empty($name) || empty($description) || empty($contactNumber) || empty($password) || empty($photo) || empty($adminId)){
 			header('location: ../views/creat_company.php?error=null_value');
@@ -114,8 +114,8 @@
 				'contactNumber'=> $contactNumber,
 				'password'     => $password,
 				'photo'        => $photo,
-				'adminId'      => $adminId
-				'id'         => $id
+				'adminId'      => $adminId,
+				'id'           => $id
 			];
 
 			$status = updateCom($author);
