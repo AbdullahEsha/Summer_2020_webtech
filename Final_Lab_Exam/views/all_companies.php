@@ -7,12 +7,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Company List</title>
+	<script type="text/javascript" src="../assets/Js/search.js"></script>
+	<title>Author List</title>
 </head>
 <body>
 
 	<a href="home.php">Back</a> |
-	<a href="../php/logout.php">Logout</a> 
+	<a href="../php/logout.php">Logout</a> <br>
+	<input type="text" name="search" placeholder="search" id="search" onkeyup="load();">
+	<br>
+	<hr>
+	<div id="searchdata">search items: </div>
+	<hr>
 	
 	<h3>Author list</h3>
 

@@ -1,5 +1,19 @@
 <?php
 	require_once('../db/db.php');
+	
+
+	function searchAuthor($name){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql= "select * from authors where name like '%{$name}%'";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row;
+	}
 
 	function getByID($id){
 		$conn = dbConnection();
